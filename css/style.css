@@ -1,0 +1,147 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e6eb; /* Light grey background */
+    overflow: hidden; /* Hide overflow from pattern */
+}
+
+/* Creative Background Pattern (example - adjust as needed) */
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Replace with your own subtle pattern image if desired */
+    /* Example: linear-gradient for a simple texture */
+    background: linear-gradient(45deg, #f0f5f9 25%, transparent 25%) -50px -50px / 100px 100px,
+                linear-gradient(45deg, #dee4eb 25%, transparent 25%) 50px 50px / 100px 100px;
+    background-color: #e0e6eb; /* Fallback for pattern */
+    opacity: 0.6;
+    z-index: -1;
+}
+
+
+.container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px; /* Adjust max-width as needed */
+    width: 90%;
+    z-index: 1; /* Ensure content is above background */
+}
+
+.main-title {
+    color: #334466; /* Dark blue/purple */
+    font-size: 2.2em; /* Larger for impact */
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.sub-title {
+    color: #556688; /* Slightly lighter */
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.button-group, .button-group-small {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    gap: 25px; /* Spacing between buttons */
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.round-button {
+    display: flex; /* Use flexbox for vertical centering of text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    min-width: 250px; /* Minimum width for buttons */
+    padding: 18px 30px;
+    border-radius: 30px; /* Pill-shaped buttons */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: 2px solid; /* Border for the outline effect */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Specific button colors */
+.button-orange {
+    background-color: #fff0ed; /* Very light orange */
+    color: #d16b53; /* Darker orange text */
+    border-color: #d16b53;
+}
+.button-orange:hover {
+    background-color: #d16b53;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+.button-pink {
+    background-color: #ffeef2; /* Very light pink */
+    color: #c9516d; /* Darker pink text */
+    border-color: #c9516d;
+}
+.button-pink:hover {
+    background-color: #c9516d;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* Adjustments for the smaller button group on the second page */
+.button-group-small .round-button {
+    min-width: 200px; /* Slightly smaller width */
+    padding: 15px 25px;
+    font-size: 1.1em;
+}
+
+.footer-text {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #778899;
+}
+
+.footer-text a.back-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.footer-text a.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+    .main-title {
+        font-size: 1.8em;
+    }
+    .sub-title {
+        font-size: 1.3em;
+    }
+    .round-button {
+        min-width: unset; /* Allow buttons to shrink further */
+        width: 100%; /* Take full width on small screens */
+    }
+    .button-group, .button-group-small {
+        gap: 15px;
+    }
+}
